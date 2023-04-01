@@ -1,6 +1,10 @@
-document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
-  });
+document.getElementsByClassName('btn')[0].addEventListener('click',()=>{
+  document.getElementsByClassName('btn')[0].innerHTML="sent";
+});
+
+const toggler= document.getElementById("toggler");
+const navMenu=document.getElementById("nav-links");
+
+toggler.addEventListener("click",()=>{
+    navMenu.classList.toggle("active")
+});
