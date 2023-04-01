@@ -396,51 +396,40 @@ section {
 }
 
 /* !toggler */
-nav{
-  /* background: #1e202c; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: aliceblue;
-  padding: 10px;
-  position:fixed;
-  /* width: 100%; */
-  /* font-size: 1.3rem; */
-  position: relative;
-}
 
 
 
-a{
-  text-decoration: none;
-  color: a;
-  color: aliceblue;
-  display: block;
-}
-
-#toggler{
-  position: absolute;
-  top: 15px;
-  right: 50px;
-}
-
-.nav-menu{
-  text-align: center;
-  padding: 20px;
-}
 
 /*  toggle functionality using the dom / toggle/change class */
-#nav-links{
-  display: none; 
+
+#toggler{
+  display: none;
 }
 #nav-links.active{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   transition: all 0.5s ease-out;
-
 }
 
-@media screen and (min-width:678px) {
+@media screen and (max-width:678px) {
+  #toggler{
+    color: aliceblue;
+    font-weight: 900;
+    z-index: 3;
+  }
+  nav{
+    color: aliceblue;
+    padding: 10px;
+     position:fixed;
+    width: 100%;
+    font-size: 1.3rem;
+    position: absolute;
+  }
+  #body-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .timeline-box:nth-child(2n) {
     left: 57%;
   }
@@ -496,23 +485,28 @@ a{
 /* ! toggler */
 nav{
   flex-direction: column;
-  background: #1e202c;
+  
 }
 ul{
   flex-direction: column;
+  gap: 5px;
 }
-
 #toggler{
-  display: none;
+  display: inline;
+  position: absolute;
+  top: 15px;
+  right: 50px;
 }
 #nav-links{
-  display: inline; 
-}
-.active{
-  display: flex;
-  flex-direction: column;
+  display: none; 
 }
 
+.active{
+  background: #1e202c;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-out;
+}
 
 }
 
