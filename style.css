@@ -395,7 +395,52 @@ section {
   width: 30%;
 }
 
-@media screen and (max-width:678px) {
+/* !toggler */
+nav{
+  /* background: #1e202c; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: aliceblue;
+  padding: 10px;
+  position:fixed;
+  /* width: 100%; */
+  /* font-size: 1.3rem; */
+  position: relative;
+}
+
+
+
+a{
+  text-decoration: none;
+  color: a;
+  color: aliceblue;
+  display: block;
+}
+
+#toggler{
+  position: absolute;
+  top: 15px;
+  right: 50px;
+}
+
+.nav-menu{
+  text-align: center;
+  padding: 20px;
+}
+
+/*  toggle functionality using the dom / toggle/change class */
+#nav-links{
+  display: none; 
+}
+#nav-links.active{
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-out;
+
+}
+
+@media screen and (min-width:678px) {
   .timeline-box:nth-child(2n) {
     left: 57%;
   }
@@ -448,6 +493,26 @@ section {
     font-weight: 800;
     margin-bottom: 0.5rem;
 }
+/* ! toggler */
+nav{
+  flex-direction: column;
+  background: #1e202c;
+}
+ul{
+  flex-direction: column;
+}
+
+#toggler{
+  display: none;
+}
+#nav-links{
+  display: inline; 
+}
+.active{
+  display: flex;
+  flex-direction: column;
+}
+
 
 }
 
