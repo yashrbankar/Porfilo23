@@ -5,6 +5,6 @@ document.getElementsByClassName('btn')[0].addEventListener('click',()=>{
 const toggler= document.getElementById("toggler");
 const navMenu=document.getElementById("nav-links");
 
-toggler.addEventListener("click",()=>{
+toggler.addEventListener('click',()=>{
     navMenu.classList.toggle("active")
 });

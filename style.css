@@ -71,9 +71,9 @@
 
 .social-icons li a i {
   color: white;
-  padding: 10px;
+  padding: 15px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .social-icons li {
@@ -145,7 +145,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  padding-bottom:30px ;
 }
 
 .section-heading {
@@ -232,7 +232,7 @@ section {
 /* !porfolio */
 
 .projects {
-  width: 70%;
+  width: 80%;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -396,40 +396,77 @@ section {
 }
 
 /* !toggler */
-
-
-
-
 /*  toggle functionality using the dom / toggle/change class */
 
-#toggler{
+#toggler {
   display: none;
 }
-#nav-links.active{
+
+#nav-links.active {
   display: flex;
   /* flex-direction: column; */
   transition: all 0.5s ease-out;
 }
 
 @media screen and (max-width:678px) {
-  #toggler{
+
+  /* !toggler  responsive */
+  nav {
     color: aliceblue;
-    font-weight: 900;
-    z-index: 3;
-  }
-  nav{
-    color: aliceblue;
-    padding: 10px;
-     position:fixed;
+    padding: 0px;
+    position: fixed;
     width: 100%;
-    font-size: 1.3rem;
+    /* height: 100%; */
+    font-size: 1rem;
     position: absolute;
   }
+
   #body-header {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  /* ! toggler */
+  nav {
+    flex-direction: column;
+  }
+
+  ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #toggler {
+    display: inline;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    transition: all 0.5s ease-out;
+    z-index: 4;
+  }
+
+  #toggler:hover {
+    color: black;
+    background: white;
+    border-radius: 0%;
+  }
+
+  #nav-links {
+    display: none;
+  }
+
+  .active {
+    background: #1e202c;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*! timeliner */
   .timeline-box:nth-child(2n) {
     left: 57%;
   }
@@ -467,6 +504,7 @@ section {
     width: 400px;
     height: 330px;
   }
+
   #contact-form {
     display: flex;
     flex-direction: column;
@@ -474,6 +512,7 @@ section {
     gap: 10px;
     margin: 20px;
   }
+
   .my-name {
     font-size: 2.5rem;
     color: white;
@@ -481,40 +520,17 @@ section {
     letter-spacing: 0.1rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-}
-/* ! toggler */
-nav{
-  flex-direction: column;
-  
-}
-ul{
-  flex-direction: column;
-  gap: 5px;
-}
-#toggler{
-  display: inline;
-  position: absolute;
-  top: 15px;
-  right: 50px;
-}
-#nav-links{
-  display: none; 
-}
+  }
 
-.active{
-  background: #1e202c;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.5s ease-out;
-}
+
 
 }
 
-@media screen and(min-width:400px) 
-{
+@media screen and(min-width:400px) {
   .items {
     height: 200px;
   }
+
   #contact-form {
     display: flex;
     flex-direction: column;
@@ -522,4 +538,20 @@ ul{
     gap: 10px;
     margin: 20px;
   }
+}
+
+footer {
+  background-color: #14144b;
+  color: #edede9;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
 }
